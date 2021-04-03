@@ -1,0 +1,3 @@
+# Project exclude paths
+/HDFSClient/target/
+/MapReduceDemo/target/
