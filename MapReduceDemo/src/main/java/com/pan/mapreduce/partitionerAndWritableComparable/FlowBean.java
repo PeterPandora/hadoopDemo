@@ -1,7 +1,6 @@
-package com.pan.mapreduce.writableComparable;
+package com.pan.mapreduce.partitionerAndWritableComparable;
 
 import lombok.Data;
-import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
