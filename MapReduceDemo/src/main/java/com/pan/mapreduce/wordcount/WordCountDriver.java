@@ -1,5 +1,6 @@
 package com.pan.mapreduce.wordcount;
 
+import com.pan.mapreduce.util.DateUtil;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -34,7 +35,7 @@ public class WordCountDriver {
         job.setOutputValueClass(IntWritable.class);
 //        6.设置输入路径和输出路径
         FileInputFormat.setInputPaths(job, new Path("E:\\workspace\\hadoopDemo\\MapReduceDemo\\src\\main\\resources\\word.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("E:\\workspace\\hadoopDemo\\MapReduceDemo\\src\\main\\resources\\result\\word\\" + (int) (Math.random() * 100)));
+        FileOutputFormat.setOutputPath(job, new Path("E:\\workspace\\hadoopDemo\\MapReduceDemo\\src\\main\\resources\\result\\word\\" + DateUtil.now()));
 //        7.提交job
         boolean result = job.waitForCompletion(true);
 

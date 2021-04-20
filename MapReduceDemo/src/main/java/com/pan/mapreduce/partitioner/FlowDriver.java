@@ -1,5 +1,6 @@
 package com.pan.mapreduce.partitioner;
 
+import com.pan.mapreduce.util.DateUtil;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
@@ -37,7 +38,7 @@ public class FlowDriver {
 
 //        6.设置输入路径和输出路径
         FileInputFormat.setInputPaths(job, new Path("E:\\workspace\\hadoopDemo\\MapReduceDemo\\src\\main\\resources\\phone_data.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("E:\\workspace\\hadoopDemo\\MapReduceDemo\\src\\main\\resources\\result\\phone\\" + (int) (Math.random() * 100)));
+        FileOutputFormat.setOutputPath(job, new Path("E:\\workspace\\hadoopDemo\\MapReduceDemo\\src\\main\\resources\\result\\phone\\" + DateUtil.now()));
 //        7.提交job
         boolean result = job.waitForCompletion(true);
 
